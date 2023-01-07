@@ -56,7 +56,7 @@ public class BoekDao {
         query.setParameter("boekNaam", boek.getBoekNaam());
         query.setParameter("boekId", boek.getBoekId());
         int rowsUpdated = query.executeUpdate();
-        System.out.println("Entities Updated" + rowsUpdated);
+        System.out.println(" Entities Updated: " + rowsUpdated);
         entityManager.getTransaction().commit();
         return rowsUpdated;
     }
@@ -66,6 +66,8 @@ public class BoekDao {
         Query query = entityManager.createQuery("delete from Boek b where b.boekNaam = :boek_naam");
         query.setParameter("boek_naam", boek_naam);
         int rowsDeleted = query.executeUpdate();
+        String deletedBoek = boek_naam;
+        System.out.println(" Het boek " + deletedBoek + " is verwijderd ");
         System.out.println("entities deleted: " + rowsDeleted);
         entityManager.getTransaction().commit();
         return rowsDeleted;

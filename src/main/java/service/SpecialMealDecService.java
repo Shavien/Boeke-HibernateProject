@@ -20,8 +20,8 @@ public class SpecialMealDecService {
         System.out.println("Studenten die willen ontbijten en lezen kunnen het ontbijtmenu kiezen");
         bookMeal.getMeal(menuDao.findByMorningMeal("Brood met beleg en thee"));
 
-        System.out.println("\n Studenten die warm willen eten kunnen het dinnermenu kiezen");
-        dinnerMeal.getMeal(menuDao.findByDinnerMeal("warme maltijd"));
+        System.out.println("\n Studenten die warm willen eten kunnen het warme menu kiezen");
+        dinnerMeal.getMeal(menuDao.findByDinnerMeal("warme maaltijd"));
 
         morningMeal.getMeal(menuDao.findByMorningMeal("brood met beleg en thee"));
 

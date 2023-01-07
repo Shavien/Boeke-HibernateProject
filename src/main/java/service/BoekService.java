@@ -29,9 +29,11 @@ public class BoekService {
     }
 
     public void boekDelete(){
-        boekDao.deleteBoek("Harry Potter");
-        Boek deletedBoek = boekDao.findByBoekNaam("Harry Potter");
-        System.out.println("Het boek genaamd: " + deletedBoek + "is verwijderd");
+        boekDao.deleteBoek("Azkaban");
+
+        ////////////////// veranderd in bookDao
+/*        Boek deletedBoek = boekDao.findByBoekNaam("Azkaban");
+        System.out.println("Het boek genaamd: " + deletedBoek + "is verwijderd");*/
     }
 
     public void BoekZoeker(String book) {
