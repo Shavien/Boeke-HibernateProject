@@ -6,6 +6,9 @@ import entities.Boek;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 
+import java.awt.print.Book;
+import java.util.List;
+
 public class BoekService {
     BoekDao boekDao = new BoekDao();
     private EntityManager entityManager = JPAConfig.getEntityManager();
@@ -24,8 +27,9 @@ public class BoekService {
 //        System.out.println("Opgehaald: " + boekSelect);
 //    }
 
-    public void BookList(){
+    public List<Book> BookList(){
         boekDao.GetBoekenLijst();
+        return null;
     }
 
     public void boekDelete(){

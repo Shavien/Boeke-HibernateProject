@@ -45,10 +45,11 @@ public class BoekDao {
 
     public Boek insertBoek(Boek boek) {
         entityManager.getTransaction().begin();
-        entityManager.persist(boek);
+        entityManager.merge(boek);
         entityManager.getTransaction().commit();
         return boek;
     }
+
 
     public int updateBoek(Boek boek) {
         entityManager.getTransaction().begin();
