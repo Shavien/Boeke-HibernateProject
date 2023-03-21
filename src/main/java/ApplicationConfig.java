@@ -1,5 +1,3 @@
-package Application;
-
 import configuration.JPAConfig;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
@@ -17,5 +15,4 @@ public class ApplicationConfig extends Application {
         JPAConfig.getEntityManager();
         return properties;
     }
-
 }

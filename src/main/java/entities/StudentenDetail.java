@@ -1,9 +1,6 @@
 package entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -17,6 +14,10 @@ public class StudentenDetail {
     @Id
     @GeneratedValue
     @Column(name = "detail_id")
+
+    @OneToOne
+    @JoinColumn(name = "student_id")
+    private Studenten studenten;
 
     private int detailId;
     private int telefoonNummer;

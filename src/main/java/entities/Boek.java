@@ -31,7 +31,11 @@ public class Boek {
     private List<Studenten> studentenLijst;
 
     @ManyToOne
+    @JoinColumn(name = "auteur_id")
     private Auteur auteur;
+
+    @OneToMany(mappedBy = "genre")
+    private List<Genre> genre;
 
     public List<Studenten> getStudentenLijst() {
         return studentenLijst;

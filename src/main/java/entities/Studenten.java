@@ -22,6 +22,7 @@ public class Studenten {
     private String achternaam;
 
     @ManyToMany
+    @JoinTable(name = "boek_studenten" , joinColumns = {@JoinColumn(name = "student_id")}, inverseJoinColumns = {@JoinColumn(name ="boek_id")})
     private List<Boek> boeken;
 
     @OneToOne(cascade = CascadeType.ALL)

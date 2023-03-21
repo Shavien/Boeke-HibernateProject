@@ -27,9 +27,8 @@ public class BoekService {
 //        System.out.println("Opgehaald: " + boekSelect);
 //    }
 
-    public List<Book> BookList(){
-        boekDao.GetBoekenLijst();
-        return null;
+    public List<Boek> bookList(){
+        return boekDao.getBoekenLijst();
     }
 
     public void boekDelete(){

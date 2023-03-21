@@ -25,7 +25,7 @@ public class BoekDao {
         return boek;
     }
 
-    public List<Boek> GetBoekenLijst(){
+    public List<Boek> getBoekenLijst(){
         entityManager.getTransaction().begin();
         String jpql = "SELECT b FROM Boek b";
         TypedQuery<Boek> query = entityManager.createQuery(jpql,Boek.class);
